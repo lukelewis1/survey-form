@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lecture Survey Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <h1 id="title">Lecture Survey Form</h1>
+    <p id="description">Thank you for taking the time to take this survey</p>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">Name 
+          <input id="name" type="text" name="name" placeholder="Enter your name" required/>
+        </label>
+        <label for="email" id="email-label">
+          Email <input id="email" type="email" name="email" placeholder="Enter your email" required/>
+        </label>
+        <label for="number" id="number-label">
+          Age <input id="number" name="age" type="number" min="13" max="120" placeholder="Age" required/>
+        </label>
+        <label for="dropdown">Faculty
+          <select id="dropdown">
+            <option value="">Select current role</option>
+            <option value="1">Law</option>
+            <option value="2">Health Sciences</option>
+            <option value="3">Engineering</option>
+            <option value="4">Arts</option>
+            <option value="5">Other</option>
+          </select>
+        </label>
+        <label for="study-level">What level of study are you doing?
+          <select id="study-level">
+            <option value="">Level of study</option>
+            <option value="1">Diploma</option>
+            <option value="2">Bachelor's</option>
+            <option value="3">Honours</option>
+            <option value="4">Masters</option>
+            <option value="5">Doctorate</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>What type of study are you undertaking?</legend>
+        <label for="part-time"><input type="radio" id="part-time" class="inline" checked name="study-type" value="part-time"/>Part-time</label>
+        <label><input type="radio" id="full-time" class="inline" name="study-type" value="full-time"/>Full-time</label>
+      </fieldset>
+      <fieldset>
+        <legend>What type of lectures are you primarily enrolled in? (Select all that apply)</legend>
+        <label for="in-person">
+          <input type="checkbox" id="in-person" class="inline" checked value="in-person"/> In-person
+        </label>
+        <label for="online">
+          <input type="checkbox" id="online" class="inline" value="online"/> Online
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>What is your preferred delivery option?</legend>
+        <label for="in-person-delivery"><input type="radio" id="in-person-delivery"" checked class="inline" name="delivery" value="in-person-delivery"/>In-person</label>
+        <label for="online-delivery"><input type="radio" id="online-delivery" class="inline" name="delivery" value="online-delivery"/>Online</label>
+        <label for="combination-delivery"><input type="radio" id="combination-delivery" class="inline" name="delivery" value="combination-delivery"/>Combination (in-person + online)</label>
+      </fieldset>
+      <label for="response">Provide your opinion on the current lecture system:
+        <textarea id="response" row="3" cols="30" placeholder="Type your response here..."></textarea>
+      </label>
+      <input type="submit" value="Submit" id="submit"/>
+    </form>
+  </body>
+</html>
